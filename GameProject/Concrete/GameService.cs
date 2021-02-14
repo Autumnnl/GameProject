@@ -1,24 +1,25 @@
 ﻿using GameProject.Abstract;
+using GameProject.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace GameProject.Concrete
 {
-    class GameService:Abstract.IGameService
+    class GameService:IGameService
     {
 
-        public void Add(Entities.Game game)
+        public void Add(Game game)
         {
             Console.WriteLine("Added! :" + game.GameName);
 
         }
-        public void Update(Entities.Game game)
+        public void Update(Game game)
         {
             Console.WriteLine("Updated! :" + game.GameName);
 
         }
-        public void Delete(Entities.Game game)
+        public void Delete(Game game)
         {
             Console.WriteLine("Deleted! :" + game.GameName);
 

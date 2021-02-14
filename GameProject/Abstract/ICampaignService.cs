@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using GameProject.Entities;
 
 namespace GameProject.Abstract
 {
     interface ICampaignService
     {
-        void Add(Entities.Campaign campaign);
-        void Update(Entities.Campaign campaign);
-        void Delete(Entities.Campaign campaign);
+        void Add(Campaign campaign);
+        void Update(Campaign campaign);
+        void Delete(Campaign campaign);
     }
 }

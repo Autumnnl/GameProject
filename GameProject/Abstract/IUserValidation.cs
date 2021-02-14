@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using GameProject.Entities;
 
 namespace GameProject.Abstract
 {
     interface IUserValidation
     {
-        bool Validate(Entities.Player player);
+        bool Validate(Player player);
     }
 }

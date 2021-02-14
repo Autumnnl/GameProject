@@ -1,20 +1,21 @@
 ﻿using GameProject.Abstract;
+using GameProject.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace GameProject.Concrete
 {
-    class PlayerService:Abstract.IPlayerService
+    class PlayerService:IPlayerService
     {
-        Abstract.IUserValidation _userValidation;
+        IUserValidation _userValidation;
 
         public PlayerService(IUserValidation userValidation)
         {
             _userValidation = userValidation;
         }
 
-        public void Add(Entities.Player player)
+        public void Add(Player player)
         {
             if (_userValidation.Validate(player)==true)
             {
@@ -26,12 +27,12 @@ namespace GameProject.Concrete
             }
 
         }
-        public void Update(Entities.Player player)
+        public void Update(Player player)
         {
             Console.WriteLine("Updated!! " + player.Name);
 
         }
-        public void Delete(Entities.Player player)
+        public void Delete(Player player)
         {
             Console.WriteLine("Deleted : " + player.Name);
 
